@@ -17,7 +17,7 @@ public class negocios {
 
         // Contar clientes novamente
         System.out.println("Número de clientes após transformação: " + mercado.contarClientes());
-
+        System.out.println(" ");
     }
 
 }
