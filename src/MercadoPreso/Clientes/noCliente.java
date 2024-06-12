@@ -2,24 +2,22 @@ package MercadoPreso.Clientes;
 
 public class noCliente {
 
-    // Declaração dos atributos públicos da classe
+    // Atributos da classe
     public String nome;
-    public TipoCliente tipoConsumidor; // Tipo do cliente (presumivelmente uma enumeração ou classe chamada TipoCliente)
+    public TipoCliente tipoConsumidor; // Tipo do cliente ( Veio da classe Enum, a pessoa pode ser Cliente ou Vendedor )
     public String email;
-    public noCliente proximoCliente; // Referência para o próximo cliente na lista
-    public noCliente clienteAnterior; // Referência para o cliente anterior na lista
+    public noCliente proximoCliente; // No referenciado ao proximo cliente
+    public noCliente clienteAnterior; // No referenciando ao cliente anterior
 
     // Construtor
     public noCliente(String nome, String email, TipoCliente tipoConsumidor) {
-        // Inicializa o atributo nome com o valor passado como parâmetro
-        this.nome = nome;
-        // Inicializa o atributo email com o valor passado como parâmetro
-        this.email = email;
-        // Inicializa o atributo tipoConsumidor com o valor passado como parâmetro
+
+        this.nome = nome; // Inicializa o atributo nome com o valor passado como parâmetro
+        this.email = email; // Mesma coisa do nome
         this.tipoConsumidor = tipoConsumidor;
-        // Inicializa o atributo proximoCliente (parece um erro, pois deveria ser null inicialmente)
-        this.proximoCliente = proximoCliente;
-        // Inicializa o atributo clienteAnterior (parece um erro, pois deveria ser null inicialmente)
-        this.clienteAnterior = clienteAnterior;
+
+        // O No de referencia primeiramente é null, até cadastrar os proximos clientes
+        this.proximoCliente = null;
+        this.clienteAnterior = null;
     }
 }

@@ -1,10 +1,29 @@
-package MercadoPreso.Clientes;
+package MercadoPreso.Mercado;
 
-public class FuncaoCliente {
+import MercadoPreso.Clientes.TipoCliente;
+import MercadoPreso.Clientes.noCliente;
+import MercadoPreso.Mercado.Itens.Produto;
+
+public class MercadoPrisão {
+
+    // Associação com outras classes
+    public noCliente noCliente;
+    public Produto produto;
 
     // Referência para o primeiro e último cliente na lista
     public noCliente inicio;
     public noCliente fim;
+
+
+    // Construtor da Classe
+    public MercadoPrisão() {
+        this.produto = new Produto();
+        this.noCliente = null;
+    }
+
+
+
+    // *** Classe Cliente *** //
 
     // Método para cadastrar um novo cliente
     public void cadastrarCliente(String nome, String email, TipoCliente tipoConsumidor) {
@@ -43,4 +62,28 @@ public class FuncaoCliente {
             atual = atual.proximoCliente;
         }
     }
+
+
+
+    // *** Classe Produto *** //
+
+    public void adicionarProduto(String nome, double preco){
+        produto.adicionarProduto(nome,preco);
+    }
+    public void removerProduto(){
+        produto.removerProduto();
+    }
+    public void listarProdutos(){
+        produto.listarProdutos();
+    }
+
+
+
+
+
+
+
+
+
 }
+

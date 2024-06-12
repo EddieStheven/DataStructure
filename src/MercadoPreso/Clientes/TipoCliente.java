@@ -1,8 +1,7 @@
 package MercadoPreso.Clientes;
 
-public enum TipoCliente {
+public enum TipoCliente { // Só vai existir dois tipos de cliente, o Cliente Normal e o Vendedor, o cliente pode se tornar vendedor
     CLIENTE,
     VENDEDOR
-
 
 }
