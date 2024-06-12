@@ -1,88 +1,48 @@
 package MercadoPreso.Mercado;
 
+import MercadoPreso.Clientes.ListaCliente;
 import MercadoPreso.Clientes.TipoCliente;
 import MercadoPreso.Clientes.noCliente;
-import MercadoPreso.Mercado.Itens.Produto;
+import MercadoPreso.Mercado.Itens.Arvore.ArvoreCompra;
+import MercadoPreso.Mercado.Itens.Pilha.Produto;
 
 public class MercadoPrisão {
 
     // Associação com outras classes
-    public noCliente noCliente;
-    public Produto produto;
+    public ListaCliente clientes; // Lista
+    public Produto produtos; // Pilha
+    public ArvoreCompra compras; // Árvore
 
-    // Referência para o primeiro e último cliente na lista
-    public noCliente inicio;
-    public noCliente fim;
+    public MercadoPrisão() { // Construtor da classe
 
+        // Pra inicializar a lista, a pilha e a Árvore
+        clientes = new ListaCliente();
+        produtos = new Produto();
+        compras = new ArvoreCompra();
 
-    // Construtor da Classe
-    public MercadoPrisão() {
-        this.produto = new Produto();
-        this.noCliente = null;
     }
 
-
-
-    // *** Classe Cliente *** //
-
-    // Método para cadastrar um novo cliente
-    public void cadastrarCliente(String nome, String email, TipoCliente tipoConsumidor) {
-        // Cria um novo cliente
-        noCliente novoCliente = new noCliente(nome, email, tipoConsumidor);
-        // Verifica se a lista está vazia
-        if (inicio == null) {
-            inicio = fim = novoCliente; // Se estiver, define o novo cliente como início e fim da lista
-        } else {
-            // Caso contrário, adiciona o novo cliente ao final da lista
-            fim.proximoCliente = novoCliente;
-            novoCliente.clienteAnterior = fim;
-            fim = novoCliente;
-        }
+    // Esse método aqui vai cadastrar um novo cliente
+    public void cadastrarCliente(String nome, String email, TipoCliente tipo) {
+        clientes.cadastrarCliente(nome, email, tipo); // Aqui vai cadastrar novo cliente na lista
+        System.out.println("O cliente: " + nome + " > " + email + " > " + tipo + " foi cadastrado!");
     }
 
-    // Método para remover um cliente pelo nome
-    public void removerCliente(String nome) {
-        noCliente atual = inicio;
-        // Percorre a lista procurando pelo cliente com o nome fornecido
-        while (atual != null) {
-            if (atual.nome == nome) { // Usando == para comparar strings
-                // Remove o cliente da lista
-                if (atual.clienteAnterior != null) {
-                    atual.clienteAnterior.proximoCliente = atual.proximoCliente;
-                } else {
-                    inicio = atual.proximoCliente;
-                }
-                if (atual.proximoCliente != null) {
-                    atual.proximoCliente.clienteAnterior = atual.clienteAnterior;
-                } else {
-                    fim = atual.clienteAnterior;
-                }
-                return;
-            }
-            atual = atual.proximoCliente;
-        }
+    public void removerCliente(String nome){ // Nesse método vc vai remover o cliente
+        clientes.removerCliente(nome);
+        System.out.println("O cliente " + nome + " foi removido! Otário");
     }
 
-
-
-    // *** Classe Produto *** //
-
-    public void adicionarProduto(String nome, double preco){
-        produto.adicionarProduto(nome,preco);
+    // Método para cadastrar novo produto
+    public void adicionarProduto(String nome, double preco) {
+        produtos.adicionarProduto(nome, preco); // Vai adcionar novo produto a pilha
+        System.out.println("O produto foi cadastrado!");
+        System.out.println(" " + nome + " no preço de " + preco + "R$");
     }
-    public void removerProduto(){
-        produto.removerProduto();
+    // Método para realizar uma compra
+    public void realizarCompra(int idCompra, String detalhes) {
+        compras.adicionarCompra(idCompra, detalhes); // vai adicionar o produto na árvore
     }
-    public void listarProdutos(){
-        produto.listarProdutos();
-    }
-
-
-
-
-
-
-
 
 
 }

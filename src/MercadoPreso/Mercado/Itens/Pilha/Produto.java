@@ -1,4 +1,4 @@
-package MercadoPreso.Mercado.Itens;
+package MercadoPreso.Mercado.Itens.Pilha;
 
 import java.util.ArrayList;
 import java.util.List;
