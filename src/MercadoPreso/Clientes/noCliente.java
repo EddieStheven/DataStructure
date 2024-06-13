@@ -10,7 +10,7 @@ public class noCliente {
     public noCliente clienteAnterior; // No referenciando ao cliente anterior
 
     // Construtor
-    public noCliente() {
+    public noCliente(String nome, String email, TipoCliente tipoConsumidor) {
 
         this.nome = nome; // Inicializa o atributo nome com o valor passado como parâmetro
         this.email = email; // Mesma coisa do nome

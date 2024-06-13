@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Produto {
+
     // Atributos da classe
     public String nome;
     public double preco;
@@ -30,13 +31,37 @@ public class Produto {
 
 
     // Método para remover produto
-    public Produto removerProduto(){
+     public Produto removerProduto(){
         int tamanho = pilha.size(); // Size é para ver o tamanho de uma ArrayList, então aqui a gente ver o tamanho da lista
         if (tamanho > 0) { // Verifica se a lista está vazia
-            return pilha.remove(tamanho - 1); // remove em -1 (ultimo item)
+            return pilha.remove(tamanho - 1).removerProduto(); // remove em -1 (ultimo item)
         }
         return null; // se a pilha estiver vazia, vai retornar null
     }
+
+/*
+    // Teste para tentar remover um item especifico da lista
+    public Produto buscarProduto(String nomeProduto) {
+        for (Produto produto : pilha) {
+            if (produto.nome.equals(nomeProduto)) {
+                return produto;
+            }
+        }
+        return null;
+    }
+    public boolean removerProduto(String nomeProduto) {
+        Produto produto = buscarProduto(nomeProduto);
+        if (produto != null) {
+            pilha.remove(produto);
+            return true;
+        }
+        return false;
+    }
+ // Teste até aqui ============================
+
+
+     */
+
 
     // Aqui vai listar os produtos na pilha
     public void listarProdutos(){

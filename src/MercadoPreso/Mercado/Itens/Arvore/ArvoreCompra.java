@@ -8,8 +8,8 @@ public class ArvoreCompra {
     }
 
     // Aqui vc vai poder adcionar uma compra na árvore
-    public void adicionarCompra(int idCompra, String detalhes){
-        Compra novaCompra = new Compra(idCompra, detalhes); // uma nova compra
+    public void adicionarCompra(int idCompra, String nomeProduto, String nomeComprador, String nomeVendedor){
+        Compra novaCompra = new Compra(idCompra, nomeProduto, nomeComprador, nomeVendedor); // uma nova compra
         raiz = adicionarRec(raiz,novaCompra); // ai vai adicionar a compra na arvore
     }
 
@@ -34,7 +34,7 @@ public class ArvoreCompra {
     public void listarRec(NoArvore raiz){ // Se o nó atual não for nulo, continua a listar
         if (raiz != null){
             listarRec(raiz.esquerda); // lista os nós da esquerda
-            System.out.println("ID: " + raiz.compra.idCompra + ", O produto: " + raiz.compra.detalhes + " Foi comprado!");
+            System.out.println("ID: " + raiz.compra.idCompra + " Comprador: " + raiz.compra.nomeComprador + " Vendedor: " +raiz.compra.nomeVendedor + ", O produto: " + raiz.compra.nomeProduto + " Foi comprado!");
             listarRec(raiz.direita); // lista os nós da direita
         }
     }
