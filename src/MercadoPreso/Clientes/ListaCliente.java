@@ -24,15 +24,17 @@ public class ListaCliente {
         }
     }
 
+    // Aqui vai buscar o cliente pelo nome dele
     public noCliente buscarCliente(String nome) {
-        noCliente atual = inicio;
-        while (atual != null) {
+        noCliente atual = inicio; // Meio que pega a variável 'atual' e pecorre a lista desde o inicio com ela
+        while (atual != null) { // pecorre a lista só se o atual não for nulo
+            // Equals serve para comparar, ele compara o nome do cliente atual com o que foi fornecido
             if (atual.nome.equals(nome)) {
-                return atual;
+                return atual; // se o nome bater, ele vai retornar o cliente atual
             }
-            atual = atual.proximoCliente;
+            atual = atual.proximoCliente; // vai passar para o próximo cliente
         }
-        return null;
+        return null;  // Se nenhum cliente com o nome fornecido for encontrado, retorna null
     }
 
     // Método para remover um cliente pelo nome
@@ -58,9 +60,9 @@ public class ListaCliente {
         }
     } */
 
-    public boolean Vendedor(String nome) {
-        noCliente cliente = buscarCliente(nome);
-        return cliente != null && cliente.tipoConsumidor == TipoCliente.VENDEDOR;
+    public boolean Vendedor(String nome) { // Vai verificar se o cliente é vendedor
+        noCliente cliente = buscarCliente(nome); // vai buscar pelo nome
+        return cliente != null && cliente.tipoConsumidor == TipoCliente.VENDEDOR; // verifica se o cliente não é nulo e se o tipo dele é vendedor
     }
 
 

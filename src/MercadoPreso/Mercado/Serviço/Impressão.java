@@ -16,20 +16,20 @@ public class Impressão {
         mercado.adicionarProduto("Igor", "Pista Hot-Wheels", 100.0);
         mercado.adicionarProduto("Igor", "10 pontos na AV3", 150.0);
         mercado.adicionarProduto("Eddie", "Maconha", 200.0); // Vai falhar pq só vendedor pode adicionar produto
-        mercado.adicionarProduto("Igor", "aaaaaaaaaaaaa", 150.0);
-
-        // Listar produtos disponíveis
-        mercado.listarProdutos();
-
-        mercado.realizarCompra(1,"Pista Hot-Wheels","Eddie","Igor");
 
         // Listar produtos disponíveis após compra
         mercado.listarProdutos();
 
+        mercado.realizarCompra(1,"10 ponto na AV3","Eddie","Igor");
 
+        mercado.listarProdutos();
 
+        mercado.realizarCompra(2,"Pista Hot-Wheels","Eddie","Igor");
 
+        mercado.adicionarAvaliacao("Igor","Eddie",8 );
+        mercado.adicionarAvaliacao("Igor", "Eddie",10 );
 
+        mercado.listarAvaliacoes();
 
     }
 }
