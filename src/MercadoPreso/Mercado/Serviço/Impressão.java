@@ -1,7 +1,7 @@
 package MercadoPreso.Mercado.Serviço;
 
-import MercadoPreso.Clientes.TipoCliente;
-import MercadoPreso.Mercado.MercadoPrisão;
+import MercadoPreso.Mercado.Itens.Listas.TipoCliente;
+import MercadoPreso.MercadoPrisão;
 
 public class Impressão {
     public static void main(String[] args) {
@@ -29,7 +29,9 @@ public class Impressão {
         mercado.adicionarAvaliacao("Igor","Eddie",8 );
         mercado.adicionarAvaliacao("Igor", "Eddie",10 );
 
+        mercado.listarProdutos();
         mercado.listarAvaliacoes();
+
 
     }
 }

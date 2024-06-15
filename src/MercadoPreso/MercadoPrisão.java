@@ -1,8 +1,8 @@
-package MercadoPreso.Mercado;
+package MercadoPreso;
 
-import MercadoPreso.Clientes.ListaCliente;
-import MercadoPreso.Clientes.TipoCliente;
-import MercadoPreso.Clientes.noCliente;
+import MercadoPreso.Mercado.Itens.Listas.ListaCliente;
+import MercadoPreso.Mercado.Itens.Listas.TipoCliente;
+import MercadoPreso.Mercado.Itens.Listas.noCliente;
 import MercadoPreso.Mercado.Itens.Arvore.ArvoreCompra;
 import MercadoPreso.Mercado.Itens.Fila.FilaAvaliacao;
 import MercadoPreso.Mercado.Itens.Pilha.Produto;

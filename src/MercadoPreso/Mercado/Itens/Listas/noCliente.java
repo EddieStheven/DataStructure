@@ -1,4 +1,4 @@
-package MercadoPreso.Clientes;
+package MercadoPreso.Mercado.Itens.Listas;
 
 public class noCliente {
 
