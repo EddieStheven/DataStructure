@@ -8,14 +8,14 @@ public class Produto {
     // Atributos da classe
     public String nome;
     public double preco;
-    // List onde vai ser armazenado a pilhas de produtos
-    public List<Produto> pilha;
 
-    public Produto() {
+    public List<Produto> pilha; // List onde vai ser armazenado a pilhas de produtos
+
+    public Produto() { // Construtor da classe
         pilha = new ArrayList<>(); // Inicializa a pilha de produtos
     }
 
-    // Construtor da classe
+    // Construtor da classe ( SobreCarga )
     public Produto(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;

@@ -1,6 +1,6 @@
 *Estrutura de Dados*
 
-Cenário
+Cenário:
 Considere um sistema de mercado livre na qual os clientes podem comprar (consumidor) ou vender (vendedor) produtos:
 Clientes que desejem vender produtos precisam fazer um cadastro de vendedor para depois disponibilizar seu produto para venda. 
 Clientes que desejem comprar produtos precisam fazer um cadastro de consumidor para depois efetivar a compra. 

@@ -15,7 +15,7 @@ public class Impressão {
         // Adicionar produtos pelo vendedor
         mercado.adicionarProduto("Igor", "Pista Hot-Wheels", 100.0);
         mercado.adicionarProduto("Igor", "10 pontos na AV3", 150.0);
-        mercado.adicionarProduto("Eddie", "Maconha", 200.0); // Vai falhar pq só vendedor pode adicionar produto
+        mercado.adicionarProduto("Eddie", "2 pontos no 21 ", 200.0); // Vai falhar pq só vendedor pode adicionar produto
 
         // Listar produtos disponíveis após compra
         mercado.listarProdutos();
@@ -31,6 +31,7 @@ public class Impressão {
 
         mercado.listarProdutos();
         mercado.listarAvaliacoes();
+
 
 
     }

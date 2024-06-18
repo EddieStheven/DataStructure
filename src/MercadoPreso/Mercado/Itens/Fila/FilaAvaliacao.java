@@ -20,7 +20,7 @@ public class FilaAvaliacao {
     }
 
     public Avaliacao removerAvaliacao() {
-        return fila.poll();
+        return fila.poll(); // Poll é usado para remover o objeto da fila
     }
 
     public void listarAvaliacoes(){
